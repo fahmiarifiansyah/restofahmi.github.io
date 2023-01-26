@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Restoran Padang Bunda Venus</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        font-family: "Times New Roman", Georgia, Serif;
+        background-image: url("img/interiorr.jpg");
+        background-attachment: fixed;
+        opacity: 1;
+        backdrop-filter: blur(5px);
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display";
+        letter-spacing: 5px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .column {
+        float: left;
+        width: 25%;
+        padding: 0 10px;
+      }
+
+      .row {
+        margin: 0 -5px;
+      }
+
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        text-align: center;
+        background-color: #f1f1f1;
+      }
+
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+          display: block;
+          margin-bottom: 20px;
+        }
+      }
+
+      .table {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="w3-bar-item w3-border w3-white w3-right w3-hide-small w3-xlarge;" id="navbar" style="position: sticky">
+      <a href="#home" class="w3-bar-item w3-button w3-hover-blue w3-text-white w3-hover-text-white w3-black"><b>Home</b></a>
+      <a href="#menu" class="w3-bar-item w3-button w3-hover-blue w3-text-white w3-hover-text-white w3-black"><b>Menu</b></a>
+      <a href="#order" class="w3-bar-item w3-button w3-hover-blue w3-text-white w3-hover-text-white w3-black"><b>Order</b></a>
+      <a href="#contact" class="w3-bar-item w3-button w3-hover-blue w3-text-white w3-hover-text-white w3-black"><b>Kontak</b></a>
+    </div>
+    <!-- Akhir Navbar -->
+
+    <!-- SideBar -->
+    <div class="w3-sidebar w3-bar-block w3-border-right w3-hover-black" style="display: none" id="mySidebar">
+      <button onclick="w3_close()" class="w3-bar-item w3-large">Tutup &times;</button>
+      <a href="#home" class="w3-bar-item w3-button w3-hover-green">Home</a>
+      <a href="#menu" class="w3-bar-item w3-button w3-hover-red">Menu</a>
+      <a href="#order" class="w3-bar-item w3-button w3-hover-orange">Order</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-hover-purple">Kontak</a>
+    </div>
+
+    <div id="main">
+      <div class="w3-black">
+        <button id="openNav" class="w3-button w3-grey w3-hover-black w3-large" onclick="w3_open()">&#9776;</button>
+      </div>
+    </div>
+
+    <script>
+      function w3_open() {
+        document.getElementById("main").style.marginLeft = "25%";
+        document.getElementById("mySidebar").style.width = "25%";
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("openNav").style.display = "none";
+      }
+      function w3_close() {
+        document.getElementById("main").style.marginLeft = "0%";
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("openNav").style.display = "inline-block";
+      }
+    </script>
+    <!-- Akhir SideBar -->
+
+    <!-- Home -->
+    <header class="w3-display-container w3-content w3-wide" style="max-width: 1600px; min-width: 500px" id="home">
+      <div class="w3-display-bottomleft w3-padding-large w3-opacity"></div>
+    </header>
+    <div class="w3-row w3-padding-64" id="about">
+      <div class="w3-col m6 w3-padding-large w3-hide-small">
+        <img src="img/padangdimeja.webp" class="w3-round w3-image" alt="Masakan Padang di Meja" width="500" height="900" />
+      </div>
+
+      <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center"><b>Restoran Masakan Padang Bunda Venus</b></h1>
+        <br />
+        <h5 class="w3-center"><b>Tradisi Sejak 1985</b></h5>
+        <p class="w3-large" style="color: black; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+          <b
+            >Tradisi dalam menjaga cita rasa yang otentik, tempat yang modern dan nyaman, serta pelayanan yang ramah, adalah semua tentang Bunda Venus Restaurant. Bunda Venus telah berdiri sejak tahun 1985, dan terus mengembangkan diri
+            untuk memastikan cita rasa dan kualitas terbaik. Kami melakukan banyak perjalanan untuk mempelajari berbagai hal, termasuk mencari bahan baku pilihan. Dan kami bangga menjadi salah satu Restoran Padang terbaik.</b
+          >
+        </p>
+      </div>
+    </div>
+    <hr />
+
+    <!-- Akhir Home -->
+
+    <!-- Menu -->
+    <div id="menu">
+      <h1 align="center"><b>Menu</b></h1>
+        <br />
+
+        <div class="row">
+          <div class="column">
+          <div class="card" id="1">
+          <img src="img/rendang.JPG" alt="Rendang" style="width: 100%" />
+          <h1>Rendang</h1>
+          <p class="price" style="color: black"><b>Rp13.000</b></p>
+          </div>
+          </div>
+
+          <div class="column">
+          <div class="card" id="2">
+          <img src="img/dendeng.jpg" alt="Rendang" style="width: 100%" />
+          <h1>Dendeng</h1>
+          <p class="price" style="color: black"><b>Rp12.000</b></p>
+          </div>
+          </div>
+
+          <div class="column">
+          <div class="card" id="3">
+          <img src="img/ayamgulai.jpg" alt="Rendang" style="width: 100%" />
+          <h1>Ayam Gulai</h1>
+          <p class="price" style="color: black"><b>Rp11.000</b></p>
+          </div>
+          </div>
+
+          <div class="column">
+          <div class="card" id="4">
+          <img src="img/gulaitunjang.jpg" alt="Rendang" style="width: 100%" />
+          <h1>Gulai Tunjang</h1>
+          <p class="price" style="color: black"><b>Rp15.000</b></p>
+          </div>
+          </div>
+    </div>
+    <br>
+    <hr>
+    <!-- Akhir Menu -->
+
+<!-- Order -->
+<h1  id="order" align="center" style="color: black;"><b>Pesan Di sini</b></h1>
+
+<form align="center">
+  <table class="table" style="width: 35%;" align="center">
+  <select class="text" id="pesanan" onchange="bayar()">
+      <option align="center" value="rendang">Rendang</option>
+      <option align="center" value="dendeng">Dendeng</option>
+      <option align="center" value="ayamgulai">Ayam Gulai</option>
+      <option align="center" value="gulaitunjang">Gulai Tunjang</option>
+</select>
+</form>
+<form>
+  <tr>
+    <td><b>Quantity</b></td>
+    <td><input type="number" name="banyaknya" required id="banyaknya" onchange="bayar()"></td>
+</tr>
+<tr>
+  <br>
+    <td><b>Anda harus membayar sebesar</b></td>
+    <td id="bayar"></td>
+</tr>
+</table>
+</form>
+
+<script src="keranjang.js"></script>
+<br>
+<hr>
+<!-- Akhir Order -->
+
+    <!-- Kontak -->
+    <div class="w3-container w3-padding-64" id="contact">
+      <h1 align="center"><b>Kontak</b></h1>
+      <br />
+      <p>
+        <b
+          >Kami menawarkan katering layanan lengkap untuk acara apa pun, besar atau kecil. Kami memahami kebutuhan Anda dan kami akan melayani makanan untuk pengantaran di area Kota dan Kabupaten Tegal, baik tampilan maupun rasa. Jangan
+          ragu untuk menghubungi kami.</b
+        >
+      </p>
+      <p class="w3-large" style="color: black"><b>Jl. Kenanga Selatan Gang 6 No.2, RT02/RW01, Kelurahan Mangkukusuman, Kecamatan Tegal Timur, Kota Tegal, Jawa Tengah, Indonesia, 52123.</b></p>
+      <p><b>Anda juga dapat menghubungi kami melalui telepon 0878-8275-2787 atau email masakanpadangbundavenus@gmail.com, atau Anda dapat mengirimkan pesan kepada kami di sini:</b></p>
+      <form>
+        <p><input class="w3-input" type="text" placeholder="Nama Anda" required name="Nama" /></p>
+        <p><input class="w3-input" type="number" placeholder="Kuantitas Orang" required name="Orang" /></p>
+        <p><input class="w3-input" type="datetime-local" placeholder="Jam & Tanggal" required name="date" value="2020-11-16T20:00" /></p>
+        <p><input class="w3-input" type="text" placeholder="Apa Yang Ingin Disampaikan" required name="Pesan" /></p>
+        <p><button class="w3-button w3-light-grey w3-section" type="submit">Kirim Pesan</button></p>
+      </form>
+    </div>
+    <script src="keranjang.js"></script>
+    <!-- Akhir Kontak -->
+
+    <!-- Footer -->
+    <footer class="w3-center w3-light-grey" style="display: contents; font-size: 20px">
+      <p>
+        <b>Created by <a href="https://www.instagram.com/fahmian_/" title="Fahmi Arifiansyah" target="_blank" class="w3-hover-text-grey">Fahmi Arifiansyah</a></b>
+      </p>
+    </footer>
+    <!-- Akhir Footer -->
+  </body>
+</html>
